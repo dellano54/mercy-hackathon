@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+google-generativeai
+python-multipart
+websockets
+pydantic
+numpy
+scikit-learn
+python-dotenv

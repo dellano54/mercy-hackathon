@@ -1,0 +1,26 @@
+[
+  {
+    "video_id": "cctv_001",
+    "file_path": "data/cctv_videos/crash_main_st.mp4",
+    "location": "Main Street and 5th Avenue",
+    "coordinates": { "lat": 40.7128, "lng": -74.0060 },
+    "timestamp": "2026-04-10T10:30:00Z",
+    "camera_type": "Fixed Dome"
+  },
+  {
+    "video_id": "cctv_002",
+    "file_path": "data/cctv_videos/truck_sidewalk.mp4",
+    "location": "Oak Road near Public Park",
+    "coordinates": { "lat": 40.7135, "lng": -74.0075 },
+    "timestamp": "2026-04-10T10:35:00Z",
+    "camera_type": "PTZ"
+  },
+  {
+    "video_id": "cctv_003",
+    "file_path": "data/cctv_videos/fire_industrial_zone.mp4",
+    "location": "Industrial Way, Warehouse B",
+    "coordinates": { "lat": 40.7150, "lng": -74.0100 },
+    "timestamp": "2026-04-10T10:40:00Z",
+    "camera_type": "Thermal"
+  }
+]
