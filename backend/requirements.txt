@@ -1,9 +1,10 @@
 fastapi
 uvicorn
-google-generativeai
+google-genai
 python-multipart
 websockets
 pydantic
 numpy
-scikit-learn
 python-dotenv
+opencv-python
+httpx

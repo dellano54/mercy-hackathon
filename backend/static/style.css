@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.iphone-frame {
+    width: 100%;
+    max-width: 430px; /* iPhone 15 Pro Max width */
+    height: 100%;
+    max-height: 932px;
+    background: linear-gradient(180deg, #2c3e50 0%, #000000 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+/* Status Bar */
+.status-bar {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.status-icons {
+    display: flex;
+    gap: 5px;
+}
+
+/* Call Screen Content */
+.call-screen {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 0 40px;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+#contact-name {
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+#call-status {
+    font-size: 18px;
+    color: #8e8e93;
+    letter-spacing: -0.4px;
+}
+
+/* Controls Grid */
+.call-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.control-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 30px;
+    width: 100%;
+    max-width: 320px;
+}
+
+.control-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.control-btn {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.control-btn:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.control-btn svg {
+    width: 32px;
+    height: 32px;
+}
+
+.label {
+    font-size: 13px;
+    color: #fff;
+}
+
+/* End Call Button */
+.end-call-container {
+    padding-bottom: 20px;
+}
+
+.end-call-btn {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ff3b30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: rotate(0deg); /* Initial state: Call button */
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.end-call-btn:active {
+    background-color: #d72c21;
+}
+
+.end-call-btn svg {
+    width: 35px;
+    height: 35px;
+    transform: rotate(0deg); /* Upright for call */
+    transition: transform 0.2s;
+}
+
+/* Session Active State */
+.session-active .end-call-btn {
+    /* No rotation change needed as we use it as end call always */
+}
+
+/* Home Indicator */
+.home-indicator {
+    width: 140px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    .control-grid {
+        gap: 15px 20px;
+    }
+    .control-btn {
+        width: 70px;
+        height: 70px;
+    }
+}
